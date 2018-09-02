@@ -1,0 +1,7 @@
+use_frameworks!
+workspace ‘Shopin.xcworkspace'
+project’Shopin’
+
+target ‘Shopin’ do
+  
+end
