@@ -34,7 +34,8 @@ extension MyOrdersViewController : UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let orderStatusVC = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "orderStatusVC") as? OrderStatusViewController
+        self.navigationController?.pushViewController(orderStatusVC!, animated: true)
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

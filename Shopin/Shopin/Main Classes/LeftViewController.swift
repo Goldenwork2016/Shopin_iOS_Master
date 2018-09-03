@@ -10,7 +10,7 @@ import UIKit
 
 enum LeftMenu: Int {
     case profile = 1
-    case home
+    case main
     case myCart
     case myOrder
     case wishlist
@@ -32,7 +32,7 @@ class LeftViewController : UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var menus = ["Profile", "Categories", "My cart", "My orders", "Wishlist", "Coupons", "Credits", "Chat", "About us", "Contact us", "Terms and condition", "Privacy policy"]
     var profileVC: UIViewController!
-    var homeVC: UIViewController!
+    var mainTabBarVC: UIViewController!
     var myCartVC: UIViewController!
     var myOrdersVC: UIViewController!
     var wishlistVC: UIViewController!
@@ -49,7 +49,7 @@ class LeftViewController : UIViewController {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         self.profileVC = storyboard.instantiateViewController(withIdentifier: "profileVC") as! ProfileViewController
-        self.homeVC = storyboard.instantiateViewController(withIdentifier: "homeVC") as! HomeViewController
+        self.mainTabBarVC = storyboard.instantiateViewController(withIdentifier: "mainTabBarVC") as! MainTabBarController
         self.myCartVC = storyboard.instantiateViewController(withIdentifier: "myCartVC") as! MycartViewController
         self.myOrdersVC = storyboard.instantiateViewController(withIdentifier: "myOrdersVC") as! MyOrdersViewController
         self.wishlistVC = storyboard.instantiateViewController(withIdentifier: "wishlistVC") as! WishlistViewController
@@ -70,8 +70,8 @@ class LeftViewController : UIViewController {
         switch menu {
         case .profile:
             self.slideMenuController()?.changeMainViewController(self.profileVC, close: true)
-        case .home:
-            self.slideMenuController()?.changeMainViewController(self.homeVC, close: true)
+        case .main:
+            self.slideMenuController()?.changeMainViewController(self.mainTabBarVC, close: true)
         case .myCart:
             self.slideMenuController()?.changeMainViewController(self.myCartVC, close: true)
         case .myOrder:

@@ -43,6 +43,8 @@
 		953BFDC7213AD52F0056F55F /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953BFDC6213AD52F0056F55F /* ChatViewController.swift */; };
 		953BFDC9213AD53D0056F55F /* TermsConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953BFDC8213AD53D0056F55F /* TermsConditionsViewController.swift */; };
 		953BFDCB213AD5480056F55F /* PrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953BFDCA213AD5480056F55F /* PrivacyPolicyViewController.swift */; };
+		953BFDCD213CCC640056F55F /* btn_Refund.png in Resources */ = {isa = PBXBuildFile; fileRef = 953BFDCC213CCC600056F55F /* btn_Refund.png */; };
+		953BFDCF213CCD490056F55F /* OrderStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953BFDCE213CCD490056F55F /* OrderStatusViewController.swift */; };
 		953E2785213A3A93003AEBA5 /* img_Quantity.png in Resources */ = {isa = PBXBuildFile; fileRef = 953E2784213A3A90003AEBA5 /* img_Quantity.png */; };
 		953E389A21381D14008AD424 /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953E389721381D13008AD424 /* LeftViewController.swift */; };
 		953E389C21381D14008AD424 /* RightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953E389921381D14008AD424 /* RightViewController.swift */; };
@@ -156,6 +158,8 @@
 		953BFDC6213AD52F0056F55F /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		953BFDC8213AD53D0056F55F /* TermsConditionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsConditionsViewController.swift; sourceTree = "<group>"; };
 		953BFDCA213AD5480056F55F /* PrivacyPolicyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyViewController.swift; sourceTree = "<group>"; };
+		953BFDCC213CCC600056F55F /* btn_Refund.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_Refund.png; sourceTree = "<group>"; };
+		953BFDCE213CCD490056F55F /* OrderStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderStatusViewController.swift; sourceTree = "<group>"; };
 		953E2784213A3A90003AEBA5 /* img_Quantity.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_Quantity.png; sourceTree = "<group>"; };
 		953E389721381D13008AD424 /* LeftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftViewController.swift; sourceTree = "<group>"; };
 		953E389921381D14008AD424 /* RightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightViewController.swift; sourceTree = "<group>"; };
@@ -399,6 +403,7 @@
 				953BFDA5213A9FB90056F55F /* icon_Paypal.png */,
 				953BFDA9213A9FC60056F55F /* icon_Visa.png */,
 				953BFDB0213AA9500056F55F /* bdg_Buttton0.png */,
+				953BFDCC213CCC600056F55F /* btn_Refund.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -417,6 +422,7 @@
 				95429CC1213A418E00B3FF12 /* WishlistViewController.swift */,
 				95429CC5213A469800B3FF12 /* MycartViewController.swift */,
 				953BFDBC213ACFBA0056F55F /* MyOrdersViewController.swift */,
+				953BFDCE213CCD490056F55F /* OrderStatusViewController.swift */,
 				953BFD9A213A9D040056F55F /* ProfileViewController.swift */,
 				953BFDBE213AD5020056F55F /* CouponViewController.swift */,
 				953BFDC0213AD50B0056F55F /* CreditViewController.swift */,
@@ -558,6 +564,7 @@
 				953BFDAC213A9FCB0056F55F /* icon_Maestro.png in Resources */,
 				95B3BF1B21369124007D0AB9 /* img_Splash.png in Resources */,
 				953E38B621382ECD008AD424 /* icon_Contact us.png in Resources */,
+				953BFDCD213CCC640056F55F /* btn_Refund.png in Resources */,
 				953BFDB7213ACED40056F55F /* tab_My cart_True.png in Resources */,
 				953E38BB21382ECD008AD424 /* icon_Wishlist.png in Resources */,
 				953BFDB9213ACED40056F55F /* tab_Wishlist_True.png in Resources */,
@@ -680,6 +687,7 @@
 				953BFDC1213AD50B0056F55F /* CreditViewController.swift in Sources */,
 				95B3BF3E2136A11F007D0AB9 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				95B3BF3D2136A11F007D0AB9 /* TPKeyboardAvoidingTableView.m in Sources */,
+				953BFDCF213CCD490056F55F /* OrderStatusViewController.swift in Sources */,
 				95429CC2213A418E00B3FF12 /* WishlistViewController.swift in Sources */,
 				953E38CC21392C83008AD424 /* MainTabBarController.m in Sources */,
 				95B3BF3B2136A11F007D0AB9 /* TPKeyboardAvoidingCollectionView.m in Sources */,

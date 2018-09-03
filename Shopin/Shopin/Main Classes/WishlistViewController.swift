@@ -35,7 +35,8 @@ extension WishlistViewController : UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+//        let productCategoryVC = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "productCategoryVC") as? ProductCategoryViewController
+//        self.navigationController?.pushViewController(productCategoryVC!, animated: true)
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
