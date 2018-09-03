@@ -14,6 +14,8 @@
 		951C3D9D213A30F500D4E22E /* btn_Like_True.png in Resources */ = {isa = PBXBuildFile; fileRef = 951C3D9C213A30F100D4E22E /* btn_Like_True.png */; };
 		951FC8AA213CE05A00883C9D /* SelectCountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951FC8A9213CE05A00883C9D /* SelectCountryViewController.swift */; };
 		951FC8AC213CE06500883C9D /* SelectLanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951FC8AB213CE06500883C9D /* SelectLanguageViewController.swift */; };
+		951FC8AE213D326700883C9D /* img_Shoes.png in Resources */ = {isa = PBXBuildFile; fileRef = 951FC8AD213D325A00883C9D /* img_Shoes.png */; };
+		951FC8B0213D3CC300883C9D /* ProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951FC8AF213D3CC300883C9D /* ProductDetailsViewController.swift */; };
 		9531895E21372CC300BEC102 /* img_TouchID.png in Resources */ = {isa = PBXBuildFile; fileRef = 9531895C21372CC200BEC102 /* img_TouchID.png */; };
 		9531895F21372CC300BEC102 /* img_FaceID.png in Resources */ = {isa = PBXBuildFile; fileRef = 9531895D21372CC200BEC102 /* img_FaceID.png */; };
 		9531896121372E3F00BEC102 /* LoginWithBiometricViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9531896021372E3F00BEC102 /* LoginWithBiometricViewController.swift */; };
@@ -138,6 +140,8 @@
 		951C3D9C213A30F100D4E22E /* btn_Like_True.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_Like_True.png; sourceTree = "<group>"; };
 		951FC8A9213CE05A00883C9D /* SelectCountryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCountryViewController.swift; sourceTree = "<group>"; };
 		951FC8AB213CE06500883C9D /* SelectLanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLanguageViewController.swift; sourceTree = "<group>"; };
+		951FC8AD213D325A00883C9D /* img_Shoes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_Shoes.png; sourceTree = "<group>"; };
+		951FC8AF213D3CC300883C9D /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
 		9531895C21372CC200BEC102 /* img_TouchID.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_TouchID.png; sourceTree = "<group>"; };
 		9531895D21372CC200BEC102 /* img_FaceID.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_FaceID.png; sourceTree = "<group>"; };
 		9531896021372E3F00BEC102 /* LoginWithBiometricViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWithBiometricViewController.swift; sourceTree = "<group>"; };
@@ -406,6 +410,7 @@
 				957F471621394AF8009D2518 /* store_Reebok.png */,
 				957F471721394AFA009D2518 /* store_Sparx.png */,
 				951C3D95213961C000D4E22E /* img_Panti.png */,
+				951FC8AD213D325A00883C9D /* img_Shoes.png */,
 				951C3D9C213A30F100D4E22E /* btn_Like_True.png */,
 				95429CC9213A8BA000B3FF12 /* btn_Like_Flase.png */,
 				95810BF6213A333E00136C17 /* btn_Delete.png */,
@@ -442,6 +447,7 @@
 				957F471E21394B6B009D2518 /* StoreViewController.swift */,
 				951C3D9721397D6E00D4E22E /* ProductCategoryViewController.swift */,
 				958BDE92213A90AA005CE9D3 /* ProductListViewController.swift */,
+				951FC8AF213D3CC300883C9D /* ProductDetailsViewController.swift */,
 				95429CC1213A418E00B3FF12 /* WishlistViewController.swift */,
 				95429CC5213A469800B3FF12 /* MycartViewController.swift */,
 				953BFD9A213A9D040056F55F /* ProfileViewController.swift */,
@@ -572,6 +578,7 @@
 				953E38BC21382ECD008AD424 /* icon_Coupons.png in Resources */,
 				957F47022139320F009D2518 /* tab_My cart_False.png in Resources */,
 				953BFDA1213A9FA60056F55F /* icon_Name0.png in Resources */,
+				951FC8AE213D326700883C9D /* img_Shoes.png in Resources */,
 				95B3BF24213693A0007D0AB9 /* img_AppIcon.png in Resources */,
 				953BFDBB213ACF530056F55F /* btn_Shipped.png in Resources */,
 				957F470A21393AB7009D2518 /* cat_Clothing.png in Resources */,
@@ -732,6 +739,7 @@
 				95B3BF202136928F007D0AB9 /* StartViewController.swift in Sources */,
 				953BFDC5213AD5270056F55F /* ContactUsViewController.swift in Sources */,
 				957F471121393B26009D2518 /* CategoryCollectionViewCell.swift in Sources */,
+				951FC8B0213D3CC300883C9D /* ProductDetailsViewController.swift in Sources */,
 				953189652137347A00BEC102 /* ConfirmCodeViewController.swift in Sources */,
 				953BFDBD213ACFBA0056F55F /* MyOrdersViewController.swift in Sources */,
 				953BFDDD213CDE0B0056F55F /* NotificationViewController.swift in Sources */,
