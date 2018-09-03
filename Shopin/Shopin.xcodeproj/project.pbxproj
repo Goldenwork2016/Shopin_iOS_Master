@@ -12,6 +12,8 @@
 		951C3D9821397D6E00D4E22E /* ProductCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951C3D9721397D6E00D4E22E /* ProductCategoryViewController.swift */; };
 		951C3D9B21397F0700D4E22E /* ProductCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951C3D9A21397F0700D4E22E /* ProductCategoryTableViewCell.swift */; };
 		951C3D9D213A30F500D4E22E /* btn_Like_True.png in Resources */ = {isa = PBXBuildFile; fileRef = 951C3D9C213A30F100D4E22E /* btn_Like_True.png */; };
+		951FC8AA213CE05A00883C9D /* SelectCountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951FC8A9213CE05A00883C9D /* SelectCountryViewController.swift */; };
+		951FC8AC213CE06500883C9D /* SelectLanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951FC8AB213CE06500883C9D /* SelectLanguageViewController.swift */; };
 		9531895E21372CC300BEC102 /* img_TouchID.png in Resources */ = {isa = PBXBuildFile; fileRef = 9531895C21372CC200BEC102 /* img_TouchID.png */; };
 		9531895F21372CC300BEC102 /* img_FaceID.png in Resources */ = {isa = PBXBuildFile; fileRef = 9531895D21372CC200BEC102 /* img_FaceID.png */; };
 		9531896121372E3F00BEC102 /* LoginWithBiometricViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9531896021372E3F00BEC102 /* LoginWithBiometricViewController.swift */; };
@@ -45,6 +47,13 @@
 		953BFDCB213AD5480056F55F /* PrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953BFDCA213AD5480056F55F /* PrivacyPolicyViewController.swift */; };
 		953BFDCD213CCC640056F55F /* btn_Refund.png in Resources */ = {isa = PBXBuildFile; fileRef = 953BFDCC213CCC600056F55F /* btn_Refund.png */; };
 		953BFDCF213CCD490056F55F /* OrderStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953BFDCE213CCD490056F55F /* OrderStatusViewController.swift */; };
+		953BFDD4213CD9A10056F55F /* nav_Chat.png in Resources */ = {isa = PBXBuildFile; fileRef = 953BFDD1213CD9530056F55F /* nav_Chat.png */; };
+		953BFDD5213CD9A10056F55F /* nav_Country.png in Resources */ = {isa = PBXBuildFile; fileRef = 953BFDD2213CD9570056F55F /* nav_Country.png */; };
+		953BFDD6213CD9A10056F55F /* nav_News.png in Resources */ = {isa = PBXBuildFile; fileRef = 953BFDD0213CD94F0056F55F /* nav_News.png */; };
+		953BFDD7213CD9A10056F55F /* nav_Notification.png in Resources */ = {isa = PBXBuildFile; fileRef = 953BFDD3213CD95A0056F55F /* nav_Notification.png */; };
+		953BFDD9213CDADC0056F55F /* MomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953BFDD8213CDADC0056F55F /* MomViewController.swift */; };
+		953BFDDB213CDE030056F55F /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953BFDDA213CDE030056F55F /* NewsViewController.swift */; };
+		953BFDDD213CDE0B0056F55F /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953BFDDC213CDE0B0056F55F /* NotificationViewController.swift */; };
 		953E2785213A3A93003AEBA5 /* img_Quantity.png in Resources */ = {isa = PBXBuildFile; fileRef = 953E2784213A3A90003AEBA5 /* img_Quantity.png */; };
 		953E389A21381D14008AD424 /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953E389721381D13008AD424 /* LeftViewController.swift */; };
 		953E389C21381D14008AD424 /* RightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953E389921381D14008AD424 /* RightViewController.swift */; };
@@ -127,6 +136,8 @@
 		951C3D9721397D6E00D4E22E /* ProductCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCategoryViewController.swift; sourceTree = "<group>"; };
 		951C3D9A21397F0700D4E22E /* ProductCategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCategoryTableViewCell.swift; sourceTree = "<group>"; };
 		951C3D9C213A30F100D4E22E /* btn_Like_True.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_Like_True.png; sourceTree = "<group>"; };
+		951FC8A9213CE05A00883C9D /* SelectCountryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCountryViewController.swift; sourceTree = "<group>"; };
+		951FC8AB213CE06500883C9D /* SelectLanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLanguageViewController.swift; sourceTree = "<group>"; };
 		9531895C21372CC200BEC102 /* img_TouchID.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_TouchID.png; sourceTree = "<group>"; };
 		9531895D21372CC200BEC102 /* img_FaceID.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_FaceID.png; sourceTree = "<group>"; };
 		9531896021372E3F00BEC102 /* LoginWithBiometricViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWithBiometricViewController.swift; sourceTree = "<group>"; };
@@ -160,6 +171,13 @@
 		953BFDCA213AD5480056F55F /* PrivacyPolicyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyViewController.swift; sourceTree = "<group>"; };
 		953BFDCC213CCC600056F55F /* btn_Refund.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_Refund.png; sourceTree = "<group>"; };
 		953BFDCE213CCD490056F55F /* OrderStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderStatusViewController.swift; sourceTree = "<group>"; };
+		953BFDD0213CD94F0056F55F /* nav_News.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_News.png; sourceTree = "<group>"; };
+		953BFDD1213CD9530056F55F /* nav_Chat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_Chat.png; sourceTree = "<group>"; };
+		953BFDD2213CD9570056F55F /* nav_Country.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_Country.png; sourceTree = "<group>"; };
+		953BFDD3213CD95A0056F55F /* nav_Notification.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_Notification.png; sourceTree = "<group>"; };
+		953BFDD8213CDADC0056F55F /* MomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomViewController.swift; sourceTree = "<group>"; };
+		953BFDDA213CDE030056F55F /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		953BFDDC213CDE0B0056F55F /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		953E2784213A3A90003AEBA5 /* img_Quantity.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_Quantity.png; sourceTree = "<group>"; };
 		953E389721381D13008AD424 /* LeftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftViewController.swift; sourceTree = "<group>"; };
 		953E389921381D14008AD424 /* RightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightViewController.swift; sourceTree = "<group>"; };
@@ -351,6 +369,10 @@
 				95429CC7213A88E200B3FF12 /* img_Profile.png */,
 				953E38A3213827C5008AD424 /* nav_Menu.png */,
 				957F47202139597B009D2518 /* nav_Back.png */,
+				953BFDD1213CD9530056F55F /* nav_Chat.png */,
+				953BFDD2213CD9570056F55F /* nav_Country.png */,
+				953BFDD0213CD94F0056F55F /* nav_News.png */,
+				953BFDD3213CD95A0056F55F /* nav_Notification.png */,
 				953E38A921382EC4008AD424 /* icon_About us.png */,
 				953E38A721382EC1008AD424 /* icon_Categories.png */,
 				953E38A821382EC3008AD424 /* icon_Chat.png */,
@@ -415,15 +437,16 @@
 				953E38A02138247E008AD424 /* Login & Signup */,
 				953E389921381D14008AD424 /* RightViewController.swift */,
 				953E389721381D13008AD424 /* LeftViewController.swift */,
+				953BFDD8213CDADC0056F55F /* MomViewController.swift */,
 				953E38A12138251F008AD424 /* HomeViewController.swift */,
 				957F471E21394B6B009D2518 /* StoreViewController.swift */,
 				951C3D9721397D6E00D4E22E /* ProductCategoryViewController.swift */,
 				958BDE92213A90AA005CE9D3 /* ProductListViewController.swift */,
 				95429CC1213A418E00B3FF12 /* WishlistViewController.swift */,
 				95429CC5213A469800B3FF12 /* MycartViewController.swift */,
+				953BFD9A213A9D040056F55F /* ProfileViewController.swift */,
 				953BFDBC213ACFBA0056F55F /* MyOrdersViewController.swift */,
 				953BFDCE213CCD490056F55F /* OrderStatusViewController.swift */,
-				953BFD9A213A9D040056F55F /* ProfileViewController.swift */,
 				953BFDBE213AD5020056F55F /* CouponViewController.swift */,
 				953BFDC0213AD50B0056F55F /* CreditViewController.swift */,
 				953BFDC2213AD51A0056F55F /* AboutUsViewController.swift */,
@@ -431,6 +454,10 @@
 				953BFDC6213AD52F0056F55F /* ChatViewController.swift */,
 				953BFDC8213AD53D0056F55F /* TermsConditionsViewController.swift */,
 				953BFDCA213AD5480056F55F /* PrivacyPolicyViewController.swift */,
+				953BFDDA213CDE030056F55F /* NewsViewController.swift */,
+				953BFDDC213CDE0B0056F55F /* NotificationViewController.swift */,
+				951FC8A9213CE05A00883C9D /* SelectCountryViewController.swift */,
+				951FC8AB213CE06500883C9D /* SelectLanguageViewController.swift */,
 			);
 			path = "Main Classes";
 			sourceTree = "<group>";
@@ -532,6 +559,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				957F47032139320F009D2518 /* tab_Wishlist_False.png in Resources */,
+				953BFDD5213CD9A10056F55F /* nav_Country.png in Resources */,
 				95810BFB213A354200136C17 /* img_Star_True.png in Resources */,
 				951C3D9D213A30F500D4E22E /* btn_Like_True.png in Resources */,
 				95429CC8213A88E600B3FF12 /* img_Profile.png in Resources */,
@@ -575,6 +603,7 @@
 				957F47002139320F009D2518 /* tab_Profile_False.png in Resources */,
 				95B3BF2B213698D0007D0AB9 /* btn_LoginWithBiometric.png in Resources */,
 				958E2AA82136C2FF0028F54B /* btn_Checkbox_True.png in Resources */,
+				953BFDD7213CD9A10056F55F /* nav_Notification.png in Resources */,
 				953BFDB8213ACED40056F55F /* tab_Profile_True.png in Resources */,
 				953E38B821382ECD008AD424 /* icon_My cart.png in Resources */,
 				953E38B721382ECD008AD424 /* icon_My orders.png in Resources */,
@@ -582,9 +611,11 @@
 				95810BFA213A354200136C17 /* img_Star_Flase.png in Resources */,
 				953BFDAB213A9FCB0056F55F /* icon_Discover.png in Resources */,
 				957F471D21394AFE009D2518 /* store_Sparx.png in Resources */,
+				953BFDD4213CD9A10056F55F /* nav_Chat.png in Resources */,
 				95B3BF1221368DDB007D0AB9 /* LaunchScreen.storyboard in Resources */,
 				953E38A421382A50008AD424 /* nav_Menu.png in Resources */,
 				95B3BF232136939E007D0AB9 /* bdg_Button.png in Resources */,
+				953BFDD6213CD9A10056F55F /* nav_News.png in Resources */,
 				953E38B521382ECD008AD424 /* icon_About us.png in Resources */,
 				953E2785213A3A93003AEBA5 /* img_Quantity.png in Resources */,
 				957F4721213959FB009D2518 /* nav_Back.png in Resources */,
@@ -671,6 +702,7 @@
 				95B3BF432136A9B8007D0AB9 /* LoginViewController.swift in Sources */,
 				958BDE95213A9130005CE9D3 /* ProductCollectionViewCell.swift in Sources */,
 				953BFDC7213AD52F0056F55F /* ChatViewController.swift in Sources */,
+				951FC8AC213CE06500883C9D /* SelectLanguageViewController.swift in Sources */,
 				95429CC6213A469800B3FF12 /* MycartViewController.swift in Sources */,
 				95429CC4213A41E600B3FF12 /* WishListTableViewCell.swift in Sources */,
 				95B3BF3C2136A11F007D0AB9 /* TPKeyboardAvoidingScrollView.m in Sources */,
@@ -680,6 +712,7 @@
 				958E2AAC2136D74A0028F54B /* SignupViewController.swift in Sources */,
 				95B3BF0821368DDB007D0AB9 /* AppDelegate.swift in Sources */,
 				953E38A22138251F008AD424 /* HomeViewController.swift in Sources */,
+				953BFDD9213CDADC0056F55F /* MomViewController.swift in Sources */,
 				953E389A21381D14008AD424 /* LeftViewController.swift in Sources */,
 				953BFDC9213AD53D0056F55F /* TermsConditionsViewController.swift in Sources */,
 				953BFD9B213A9D040056F55F /* ProfileViewController.swift in Sources */,
@@ -688,9 +721,11 @@
 				95B3BF3E2136A11F007D0AB9 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				95B3BF3D2136A11F007D0AB9 /* TPKeyboardAvoidingTableView.m in Sources */,
 				953BFDCF213CCD490056F55F /* OrderStatusViewController.swift in Sources */,
+				953BFDDB213CDE030056F55F /* NewsViewController.swift in Sources */,
 				95429CC2213A418E00B3FF12 /* WishlistViewController.swift in Sources */,
 				953E38CC21392C83008AD424 /* MainTabBarController.m in Sources */,
 				95B3BF3B2136A11F007D0AB9 /* TPKeyboardAvoidingCollectionView.m in Sources */,
+				951FC8AA213CE05A00883C9D /* SelectCountryViewController.swift in Sources */,
 				953BFDBF213AD5020056F55F /* CouponViewController.swift in Sources */,
 				95318963213730DD00BEC102 /* SendPWCodeViewController.swift in Sources */,
 				958BDE93213A90AA005CE9D3 /* ProductListViewController.swift in Sources */,
@@ -699,6 +734,7 @@
 				957F471121393B26009D2518 /* CategoryCollectionViewCell.swift in Sources */,
 				953189652137347A00BEC102 /* ConfirmCodeViewController.swift in Sources */,
 				953BFDBD213ACFBA0056F55F /* MyOrdersViewController.swift in Sources */,
+				953BFDDD213CDE0B0056F55F /* NotificationViewController.swift in Sources */,
 				953189672137355700BEC102 /* ChangePWViewController.swift in Sources */,
 				953E38C02138804A008AD424 /* AvapterTableViewCell.swift in Sources */,
 				951C3D9821397D6E00D4E22E /* ProductCategoryViewController.swift in Sources */,

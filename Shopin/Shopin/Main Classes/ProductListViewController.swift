@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProductListViewController: UIViewController {
+class ProductListViewController: MomViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -25,7 +25,38 @@ class ProductListViewController: UIViewController {
     
     @IBAction func onBack(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
-    }    
+    }
+    
+    @IBAction override func onChat(_ sender: Any) {
+        let chatVC0 = storyboard?.instantiateViewController(withIdentifier: "chatVC") as! ChatViewController
+        let chatVC = UINavigationController(rootViewController: chatVC0)
+        self.slideMenuController()?.changeMainViewController(chatVC, close: true)
+    }
+    
+    @IBAction override func onNews(_ sender: Any) {
+        let newsVC0 = storyboard?.instantiateViewController(withIdentifier: "newsVC") as! NewsViewController
+        let newsVC = UINavigationController(rootViewController: newsVC0)
+        self.slideMenuController()?.changeMainViewController(newsVC, close: true)
+    }
+    
+    
+    @IBAction override func onNotification(_ sender: Any) {
+        let notificationVC0 = storyboard?.instantiateViewController(withIdentifier: "notificationVC") as! NotificationViewController
+        let notificationVC = UINavigationController(rootViewController: notificationVC0)
+        self.slideMenuController()?.changeMainViewController(notificationVC, close: true)
+    }
+    
+    @IBAction override func onSelectCountry(_ sender: Any) {
+        let selectCountryVC0 = storyboard?.instantiateViewController(withIdentifier: "selectCountryVC") as! SelectCountryViewController
+        let selectCountryVC = UINavigationController(rootViewController: selectCountryVC0)
+        self.slideMenuController()?.changeMainViewController(selectCountryVC, close: true)
+    }
+    
+    @IBAction override func onSelectLanguage(_ sender: Any) {
+        let selectLanguageVC0 = storyboard?.instantiateViewController(withIdentifier: "selectLanguageVC") as! SelectLanguageViewController
+        let selectLanguageVC = UINavigationController(rootViewController: selectLanguageVC0)
+        self.slideMenuController()?.changeMainViewController(selectLanguageVC, close: true)
+    }
 }
 
 extension ProductListViewController: UICollectionViewDataSource {

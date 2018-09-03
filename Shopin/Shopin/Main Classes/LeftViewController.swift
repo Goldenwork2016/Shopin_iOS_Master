@@ -48,18 +48,41 @@ class LeftViewController : UIViewController {
         super.viewDidLoad()
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        self.profileVC = storyboard.instantiateViewController(withIdentifier: "profileVC") as! ProfileViewController
+        
+        let profileVC0 = storyboard.instantiateViewController(withIdentifier: "profileVC") as! ProfileViewController
+        self.profileVC = UINavigationController(rootViewController: profileVC0)
+        
         self.mainTabBarVC = storyboard.instantiateViewController(withIdentifier: "mainTabBarVC") as! MainTabBarController
-        self.myCartVC = storyboard.instantiateViewController(withIdentifier: "myCartVC") as! MycartViewController
-        self.myOrdersVC = storyboard.instantiateViewController(withIdentifier: "myOrdersVC") as! MyOrdersViewController
-        self.wishlistVC = storyboard.instantiateViewController(withIdentifier: "wishlistVC") as! WishlistViewController
-        self.couponVC = storyboard.instantiateViewController(withIdentifier: "couponVC") as! CouponViewController
-        self.creditVC = storyboard.instantiateViewController(withIdentifier: "creditVC") as! CreditViewController
-        self.chatVC = storyboard.instantiateViewController(withIdentifier: "chatVC") as! ChatViewController
-        self.aboutUsVC = storyboard.instantiateViewController(withIdentifier: "aboutUsVC") as! AboutUsViewController
-        self.contactUsVC = storyboard.instantiateViewController(withIdentifier: "contactUsVC") as! ContactUsViewController
-        self.termsConditionsVC = storyboard.instantiateViewController(withIdentifier: "termsConditionsVC") as! TermsConditionsViewController
-        self.privacyPolicyVC = storyboard.instantiateViewController(withIdentifier: "privacyPolicyVC") as! PrivacyPolicyViewController
+        
+        let myCartVC0 = storyboard.instantiateViewController(withIdentifier: "myCartVC") as! MycartViewController
+        self.myCartVC = UINavigationController(rootViewController: myCartVC0)
+        
+        let myOrdersVC0 = storyboard.instantiateViewController(withIdentifier: "myOrdersVC") as! MyOrdersViewController
+        self.myOrdersVC = UINavigationController(rootViewController: myOrdersVC0)
+            
+        let wishlistVC0 = storyboard.instantiateViewController(withIdentifier: "wishlistVC") as! WishlistViewController
+        self.wishlistVC = UINavigationController(rootViewController: wishlistVC0)
+            
+        let couponVC0 = storyboard.instantiateViewController(withIdentifier: "couponVC") as! CouponViewController
+        self.couponVC = UINavigationController(rootViewController: couponVC0)
+            
+        let creditVC0 = storyboard.instantiateViewController(withIdentifier: "creditVC") as! CreditViewController
+        self.creditVC = UINavigationController(rootViewController: creditVC0)
+            
+        let chatVC0 = storyboard.instantiateViewController(withIdentifier: "chatVC") as! ChatViewController
+        self.chatVC = UINavigationController(rootViewController: chatVC0)
+            
+        let aboutUsVC0 = storyboard.instantiateViewController(withIdentifier: "aboutUsVC") as! AboutUsViewController
+        self.aboutUsVC = UINavigationController(rootViewController: aboutUsVC0)
+            
+        let contactUsVC0 = storyboard.instantiateViewController(withIdentifier: "contactUsVC") as! ContactUsViewController
+        self.contactUsVC = UINavigationController(rootViewController: contactUsVC0)
+        
+        let termsConditionsVC0 = storyboard.instantiateViewController(withIdentifier: "termsConditionsVC") as! TermsConditionsViewController
+        self.termsConditionsVC = UINavigationController(rootViewController: termsConditionsVC0)
+            
+        let privacyPolicyVC0 = storyboard.instantiateViewController(withIdentifier: "privacyPolicyVC") as! PrivacyPolicyViewController
+        self.privacyPolicyVC = UINavigationController(rootViewController: privacyPolicyVC0)
     }
     
     override func didReceiveMemoryWarning() {

@@ -45,6 +45,17 @@ class LoginViewController: UIViewController {
         let mainTabBarVC = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "mainTabBarVC") as? MainTabBarController
         self.navigationController?.pushViewController(mainTabBarVC!, animated: true)
     }
+    
+    @IBAction func onLoginWithFB(_ sender: Any) {
+        let mainTabBarVC = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "mainTabBarVC") as? MainTabBarController
+        self.navigationController?.pushViewController(mainTabBarVC!, animated: true)
+    }
+    
+    @IBAction func onLoginWithBiometric(_ sender: Any) {
+        let loginWithBiometricVC = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "loginWithBiometricVC") as? LoginWithBiometricViewController
+        self.navigationController?.pushViewController(loginWithBiometricVC!, animated: true)
+    }
+    
     @IBAction func onForgotPW(_ sender: Any) {
         let sendPWCodeVC = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "sendPWCodeVC") as? SendPWCodeViewController
         self.navigationController?.pushViewController(sendPWCodeVC!, animated: true)
@@ -53,12 +64,6 @@ class LoginViewController: UIViewController {
     @IBAction func onSignup(_ sender: Any) {
         let signupVC = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "signupVC") as? SignupViewController
         self.navigationController?.pushViewController(signupVC!, animated: true)
-    }
-    
-    
-    @IBAction func onLoginWithBiometric(_ sender: Any) {
-        let loginWithBiometricVC = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "loginWithBiometricVC") as? LoginWithBiometricViewController
-        self.navigationController?.pushViewController(loginWithBiometricVC!, animated: true)
     }
 }
 
