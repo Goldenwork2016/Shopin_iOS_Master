@@ -1,5 +1,5 @@
 //
-//  ProductDetailsViewController.swift
+//  CheckoutViewController.swift
 //  Shopin
 //
 //  Created by Golden Work on 9/3/18.
@@ -8,22 +8,17 @@
 
 import UIKit
 
-class ProductDetailsViewController: MomViewController {
+class CheckoutViewController: MomViewController {
 
-    @IBOutlet weak var scrollView: UIScrollView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    override func viewDidLayoutSubviews() {
-        self.scrollView.contentSize = CGSize(width: UIScreen.main.bounds.size.width, height: 855)
     }
     
     @IBAction func onBack(_ sender: Any) {
@@ -59,10 +54,11 @@ class ProductDetailsViewController: MomViewController {
         let selectLanguageVC0 = storyboard?.instantiateViewController(withIdentifier: "selectLanguageVC") as! SelectLanguageViewController
         let selectLanguageVC = UINavigationController(rootViewController: selectLanguageVC0)
         self.slideMenuController()?.changeMainViewController(selectLanguageVC, close: true)
-    }    
-    
-    @IBAction func onBuyNow(_ sender: Any) {
-        let checkoutVC = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "checkoutVC") as? CheckoutViewController
-        self.navigationController?.pushViewController(checkoutVC!, animated: true)
     }
+    
+    @IBAction func onPay(_ sender: Any) {
+        let paymentSuccessVC = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "paymentSuccessVC") as? PaymentSuccessViewController
+        self.navigationController?.pushViewController(paymentSuccessVC!, animated: true)
+    } 
+
 }

@@ -1,5 +1,5 @@
 //
-//  ProductDetailsViewController.swift
+//  PaymentSuccessViewController.swift
 //  Shopin
 //
 //  Created by Golden Work on 9/3/18.
@@ -8,22 +8,17 @@
 
 import UIKit
 
-class ProductDetailsViewController: MomViewController {
+class PaymentSuccessViewController: MomViewController {
 
-    @IBOutlet weak var scrollView: UIScrollView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    override func viewDidLayoutSubviews() {
-        self.scrollView.contentSize = CGSize(width: UIScreen.main.bounds.size.width, height: 855)
     }
     
     @IBAction func onBack(_ sender: Any) {
@@ -54,15 +49,16 @@ class ProductDetailsViewController: MomViewController {
         let selectCountryVC = UINavigationController(rootViewController: selectCountryVC0)
         self.slideMenuController()?.changeMainViewController(selectCountryVC, close: true)
     }
-    
+
     @IBAction override func onSelectLanguage(_ sender: Any) {
         let selectLanguageVC0 = storyboard?.instantiateViewController(withIdentifier: "selectLanguageVC") as! SelectLanguageViewController
         let selectLanguageVC = UINavigationController(rootViewController: selectLanguageVC0)
         self.slideMenuController()?.changeMainViewController(selectLanguageVC, close: true)
-    }    
+    }
     
-    @IBAction func onBuyNow(_ sender: Any) {
-        let checkoutVC = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "checkoutVC") as? CheckoutViewController
-        self.navigationController?.pushViewController(checkoutVC!, animated: true)
+    @IBAction func onContinue(_ sender: Any) {
+        let myOrdersVC0 = storyboard?.instantiateViewController(withIdentifier: "myOrdersVC") as! MyOrdersViewController
+        let myOrdersVC = UINavigationController(rootViewController: myOrdersVC0)
+        self.slideMenuController()?.changeMainViewController(myOrdersVC, close: true)
     }
 }
