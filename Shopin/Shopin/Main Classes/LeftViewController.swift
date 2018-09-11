@@ -21,6 +21,7 @@ enum LeftMenu: Int {
     case contactUs
     case termsAndConditions
     case privacyPolicy
+    case logout
 }
 
 protocol LeftMenuProtocol : class {
@@ -30,7 +31,7 @@ protocol LeftMenuProtocol : class {
 class LeftViewController : UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    var menus = ["Profile", "Categories", "My cart", "My orders", "Wishlist", "Coupons", "Credits", "Chat", "About us", "Contact us", "Terms and condition", "Privacy policy"]
+    var menus = ["Profile", "Categories", "My cart", "My orders", "Wishlist", "Coupons", "Credits", "Chat", "About us", "Contact us", "Terms and condition", "Privacy policy","Logout"]
     var profileVC: UIViewController!
     var mainTabBarVC: UIViewController!
     var myCartVC: UIViewController!
@@ -85,6 +86,10 @@ class LeftViewController : UIViewController {
         self.privacyPolicyVC = UINavigationController(rootViewController: privacyPolicyVC0)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        tableView.reloadData()
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -115,7 +120,18 @@ class LeftViewController : UIViewController {
             self.slideMenuController()?.changeMainViewController(self.termsConditionsVC, close: true)
         case .privacyPolicy:
             self.slideMenuController()?.changeMainViewController(self.privacyPolicyVC, close: true)
+        case .logout:
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let rootVC: UINavigationController = storyboard.instantiateViewController(withIdentifier: "rootVC") as! UINavigationController
+            let leftVC = storyboard.instantiateViewController(withIdentifier: "leftVC") as! LeftViewController
+            let rightVC = storyboard.instantiateViewController(withIdentifier: "rightVC") as! RightViewController
+            
+            let slideMenuController = SlideMenuController(mainViewController: rootVC, leftMenuViewController: leftVC, rightMenuViewController: rightVC)
+            slideMenuController.automaticallyAdjustsScrollViewInsets = true
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            appDelegate.window?.rootViewController = slideMenuController
         }
+        
     }
 }
 

@@ -7,13 +7,18 @@
 //
 
 import UIKit
+import Alamofire
+import SVProgressHUD
 
 class LoginViewController: UIViewController {
+    let URL_USER_LOGIN = "http://api.thelifetracking.com/codeigniter/api/login"
+    let defaultValues = UserDefaults.standard
     
     @IBOutlet weak var txt_Email: UITextField!
     @IBOutlet weak var txt_Password: UITextField!
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
 
         txt_Email.delegate = self
@@ -42,13 +47,85 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func onLoginWithEmail(_ sender: Any) {
-        let mainTabBarVC = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "mainTabBarVC") as? MainTabBarController
-        self.navigationController?.pushViewController(mainTabBarVC!, animated: true)
+        
+            guard let textEmail = txt_Email.text, !textEmail.isEmpty else {
+                self.alertMessage(message: "Please enter email.", title: "")
+                return
+            }
+            guard let textPassword = txt_Password.text, !textPassword.isEmpty else {
+                self.alertMessage(message: "Please enter password.", title: "")
+                return
+            }
+            let parameters: Parameters=[
+                "user_email":textEmail,
+                "user_password":textPassword
+            ]
+        
+            SVProgressHUD.show(withStatus: "Loading")
+            Alamofire.request(URL_USER_LOGIN, method: .post, parameters: parameters,encoding: URLEncoding.default, headers: nil).responseJSON {
+                response in
+                SVProgressHUD.dismiss()
+                switch response.result {
+                case .success:
+                    print(response)
+                    if let result = response.result.value {
+                        let responseData = result as! NSDictionary
+                        //if there is no error
+                        
+                        if(responseData.value(forKey: "status") as! Int == 200){
+                            
+                            //getting the user from response
+                            let user = responseData.value(forKey: "detail") as! NSDictionary
+                            
+                            //getting user values
+                            let userId = user.value(forKey: "user_uuid") as! String
+                            //let userName = user.value(forKey: "user_name") as! String
+                            let userEmail = user.value(forKey: "user_email") as! String
+                            let userPhone = user.value(forKey: "user_phone") as! String
+                            
+                            //saving user values to defaults
+                            self.defaultValues.set(userId, forKey: "userid")
+                            //self.defaultValues.set(userName, forKey: "username")
+                            self.defaultValues.set(userEmail, forKey: "useremail")
+                            self.defaultValues.set(userPhone, forKey: "userphone")
+                            
+                            let mainTabBarVC = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "mainTabBarVC") as? MainTabBarController
+                            self.navigationController?.pushViewController(mainTabBarVC!, animated: true)
+                            
+                        }else if(responseData.value(forKey: "statu") as! Int == 201){
+                            let errorMessage = responseData.value(forKey: "message") as! String
+                            
+                            self.alertMessage(message: errorMessage, title: "")
+                        }
+                    }
+                    break
+                case .failure(let error):
+                    
+                    print(error)
+                }
+            }
     }
-    
+    func alertMessage(message: String, title:String) {
+        
+        let alert = UIAlertController(title: "Warning!", message: message, preferredStyle: UIAlertControllerStyle.alert)
+        
+        // add an action (button)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        
+        // show the alert
+        self.present(alert, animated: true, completion: nil)
+    }
     @IBAction func onLoginWithFB(_ sender: Any) {
-        let mainTabBarVC = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "mainTabBarVC") as? MainTabBarController
-        self.navigationController?.pushViewController(mainTabBarVC!, animated: true)
+            FacebookService().login(from: self) { (result) in
+                switch result {
+                case .success(let profile):
+                    print(profile)
+                    let mainTabBarVC = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "mainTabBarVC") as? MainTabBarController
+                    self.navigationController?.pushViewController(mainTabBarVC!, animated: true)
+                default:
+                    break
+                }
+            }
     }
     
     @IBAction func onLoginWithBiometric(_ sender: Any) {

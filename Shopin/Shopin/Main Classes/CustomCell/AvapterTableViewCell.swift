@@ -10,6 +10,8 @@ import UIKit
 
 class AvapterTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var userNameLbl: UILabel!
+    @IBOutlet weak var userImg: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

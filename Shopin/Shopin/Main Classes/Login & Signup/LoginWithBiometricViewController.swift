@@ -20,8 +20,17 @@ class LoginWithBiometricViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
+    @IBAction func didSelectFaceId(_ sender: Any) {
+        UserDefaults.standard.removeObject(forKey: "TouchEnable")
+        UserDefaults.standard.set(true, forKey: "FaceEnable")
+    }
+    @IBAction func didSelectTouchId(_ sender: Any) {
+        UserDefaults.standard.removeObject(forKey: "FaceEnable")
+        UserDefaults.standard.set(true, forKey: "TouchEnable")
+    }
+    @IBAction func didSelectBack(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
     /*
     // MARK: - Navigation
 

@@ -29,5 +29,9 @@ class StartViewController: UIViewController {
         let signupVC = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "signupVC") as? SignupViewController
         self.navigationController?.pushViewController(signupVC!, animated: true)
     }
+    @IBAction func onSkip(_ sender: Any) {
+        let mainTabBarVC = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "mainTabBarVC") as? MainTabBarController
+        self.navigationController?.pushViewController(mainTabBarVC!, animated: true)
+    }
 }
 
