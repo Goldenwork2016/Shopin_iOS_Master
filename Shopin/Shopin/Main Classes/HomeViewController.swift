@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class HomeViewController: MomViewController {
 
@@ -16,7 +17,24 @@ class HomeViewController: MomViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        getAllCategories()
         // Do any additional setup after loading the view.
+    }
+    
+    func getAllCategories(){
+        SVProgressHUD.show()
+        ApiServices.instance.GetAllCategories { (success) in
+            if success {
+                SVProgressHUD.dismiss()
+                self.collectionView.reloadData()
+            }
+            else {
+                SVProgressHUD.dismiss()
+                GlobalData.instance.CategoriesList.removeAll()
+                self.collectionView.reloadData()
+                Services.instance.showAlert(message: "There are no category. Coming soon!")
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -78,15 +96,14 @@ extension HomeViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return arr_Categories.count * 2
+        return GlobalData.instance.CategoriesList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "categoryCell", for: indexPath) as! CategoryCollectionViewCell
         
-        let category = arr_Categories[indexPath.row % 6]
-        cell.img_Category.image = UIImage(named:"cat_" + category)
-        
+        let category = GlobalData.instance.CategoriesList[indexPath.row]
+        cell.ConfigCellForCategory(model: category)
         return cell
     }
 }
@@ -99,7 +116,12 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
 
 extension HomeViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as! CategoryCollectionViewCell
         let storeVC = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "storeVC") as? StoreViewController
+        
+        storeVC?.selected_category_id = cell.id ?? ""
+        storeVC?.selected_category_name = cell.lblName.text ?? ""
+        
         self.navigationController?.pushViewController(storeVC!, animated: true)
     }
     

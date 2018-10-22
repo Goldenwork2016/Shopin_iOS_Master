@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Shopin.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>armv7</string>
+				<string>arm64</string>
+			</array>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>E8AB262034DD5840F5ED2E93F96D53D0E906FE58</string>
+				<key>dateExpires</key>
+				<string>9/11/19</string>
+				<key>type</key>
+				<string>iOS Development</string>
+			</dict>
+			<key>embeddedBinaries</key>
+			<array>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>armv7</string>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>E8AB262034DD5840F5ED2E93F96D53D0E906FE58</string>
+						<key>dateExpires</key>
+						<string>9/11/19</string>
+						<key>type</key>
+						<string>iOS Development</string>
+					</dict>
+					<key>name</key>
+					<string>Alamofire.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>F8M3BMP7WE</string>
+						<key>name</key>
+						<string>Asad Ijaz</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>armv7</string>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>E8AB262034DD5840F5ED2E93F96D53D0E906FE58</string>
+						<key>dateExpires</key>
+						<string>9/11/19</string>
+						<key>type</key>
+						<string>iOS Development</string>
+					</dict>
+					<key>name</key>
+					<string>Bolts.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>F8M3BMP7WE</string>
+						<key>name</key>
+						<string>Asad Ijaz</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>armv7</string>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>E8AB262034DD5840F5ED2E93F96D53D0E906FE58</string>
+						<key>dateExpires</key>
+						<string>9/11/19</string>
+						<key>type</key>
+						<string>iOS Development</string>
+					</dict>
+					<key>name</key>
+					<string>FBSDKCoreKit.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>F8M3BMP7WE</string>
+						<key>name</key>
+						<string>Asad Ijaz</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>armv7</string>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>E8AB262034DD5840F5ED2E93F96D53D0E906FE58</string>
+						<key>dateExpires</key>
+						<string>9/11/19</string>
+						<key>type</key>
+						<string>iOS Development</string>
+					</dict>
+					<key>name</key>
+					<string>FBSDKLoginKit.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>F8M3BMP7WE</string>
+						<key>name</key>
+						<string>Asad Ijaz</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>armv7</string>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>E8AB262034DD5840F5ED2E93F96D53D0E906FE58</string>
+						<key>dateExpires</key>
+						<string>9/11/19</string>
+						<key>type</key>
+						<string>iOS Development</string>
+					</dict>
+					<key>name</key>
+					<string>IQKeyboardManagerSwift.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>F8M3BMP7WE</string>
+						<key>name</key>
+						<string>Asad Ijaz</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>armv7</string>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>E8AB262034DD5840F5ED2E93F96D53D0E906FE58</string>
+						<key>dateExpires</key>
+						<string>9/11/19</string>
+						<key>type</key>
+						<string>iOS Development</string>
+					</dict>
+					<key>name</key>
+					<string>Kingfisher.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>F8M3BMP7WE</string>
+						<key>name</key>
+						<string>Asad Ijaz</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>armv7</string>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>E8AB262034DD5840F5ED2E93F96D53D0E906FE58</string>
+						<key>dateExpires</key>
+						<string>9/11/19</string>
+						<key>type</key>
+						<string>iOS Development</string>
+					</dict>
+					<key>name</key>
+					<string>SVProgressHUD.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>F8M3BMP7WE</string>
+						<key>name</key>
+						<string>Asad Ijaz</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>armv7</string>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>E8AB262034DD5840F5ED2E93F96D53D0E906FE58</string>
+						<key>dateExpires</key>
+						<string>9/11/19</string>
+						<key>type</key>
+						<string>iOS Development</string>
+					</dict>
+					<key>name</key>
+					<string>SwiftyJSON.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>F8M3BMP7WE</string>
+						<key>name</key>
+						<string>Asad Ijaz</string>
+					</dict>
+				</dict>
+			</array>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>F8M3BMP7WE.Kraftly.kraftly</string>
+				<key>com.apple.developer.team-identifier</key>
+				<string>F8M3BMP7WE</string>
+				<key>get-task-allow</key>
+				<true/>
+				<key>keychain-access-groups</key>
+				<array>
+					<string>F8M3BMP7WE.Kraftly.kraftly</string>
+				</array>
+			</dict>
+			<key>name</key>
+			<string>Shopin.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>58c1854f-910a-49c6-884a-522042fff142</string>
+				<key>name</key>
+				<string>iOS Team Provisioning Profile: *</string>
+			</dict>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>F8M3BMP7WE</string>
+				<key>name</key>
+				<string>Asad Ijaz</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -135,6 +135,14 @@
 		95B3BF3E2136A11F007D0AB9 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B3BF3A2136A11F007D0AB9 /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
 		95B3BF432136A9B8007D0AB9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B3BF422136A9B8007D0AB9 /* LoginViewController.swift */; };
 		95BCB3AB213A3FF700F52874 /* btn_AddToCart.png in Resources */ = {isa = PBXBuildFile; fileRef = 95BCB3AA213A3FF400F52874 /* btn_AddToCart.png */; };
+		C545A629215CF15C00B06A9A /* CustomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C545A628215CF15C00B06A9A /* CustomeView.swift */; };
+		C5F93D15215BB96C00592E02 /* ApiServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F93D13215BB96C00592E02 /* ApiServices.swift */; };
+		C5F93D16215BB96C00592E02 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F93D14215BB96C00592E02 /* Constants.swift */; };
+		C5F93D19215BBA0C00592E02 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F93D18215BBA0C00592E02 /* Services.swift */; };
+		C5F93D1C215BBBC900592E02 /* CategoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F93D1B215BBBC900592E02 /* CategoriesModel.swift */; };
+		C5F93D1E215BBE2D00592E02 /* GlobalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F93D1D215BBE2D00592E02 /* GlobalData.swift */; };
+		C5F93D20215BCE2000592E02 /* StoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F93D1F215BCE2000592E02 /* StoreModel.swift */; };
+		C5F93D22215BD95300592E02 /* ProductsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F93D21215BD95300592E02 /* ProductsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -276,6 +284,14 @@
 		95B3BF412136A28D007D0AB9 /* Shopin-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Shopin-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		95B3BF422136A9B8007D0AB9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		95BCB3AA213A3FF400F52874 /* btn_AddToCart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_AddToCart.png; sourceTree = "<group>"; };
+		C545A628215CF15C00B06A9A /* CustomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomeView.swift; sourceTree = "<group>"; };
+		C5F93D13215BB96C00592E02 /* ApiServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiServices.swift; sourceTree = "<group>"; };
+		C5F93D14215BB96C00592E02 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C5F93D18215BBA0C00592E02 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		C5F93D1B215BBBC900592E02 /* CategoriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesModel.swift; sourceTree = "<group>"; };
+		C5F93D1D215BBE2D00592E02 /* GlobalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalData.swift; sourceTree = "<group>"; };
+		C5F93D1F215BCE2000592E02 /* StoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreModel.swift; sourceTree = "<group>"; };
+		C5F93D21215BD95300592E02 /* ProductsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -364,16 +380,19 @@
 		95B3BF0621368DDB007D0AB9 /* Shopin */ = {
 			isa = PBXGroup;
 			children = (
+				C545A627215CF14E00B06A9A /* Views */,
+				C5F93D1A215BBBB600592E02 /* Models */,
 				8B57B81721482A5600D9C6F7 /* FacebookService */,
+				C5F93D17215BB9FF00592E02 /* Services */,
+				95B3BF192136911E007D0AB9 /* Resources */,
+				95B3BF312136A10B007D0AB9 /* Other classes */,
+				95B3BF1C2136926A007D0AB9 /* Main Classes */,
 				95B3BF0721368DDB007D0AB9 /* AppDelegate.swift */,
 				95B3BF412136A28D007D0AB9 /* Shopin-Bridging-Header.h */,
 				95B3BF1021368DDB007D0AB9 /* LaunchScreen.storyboard */,
 				95B3BF0B21368DDB007D0AB9 /* Main.storyboard */,
 				95B3BF0E21368DDB007D0AB9 /* Assets.xcassets */,
 				95B3BF1321368DDB007D0AB9 /* Info.plist */,
-				95B3BF192136911E007D0AB9 /* Resources */,
-				95B3BF312136A10B007D0AB9 /* Other classes */,
-				95B3BF1C2136926A007D0AB9 /* Main Classes */,
 			);
 			path = Shopin;
 			sourceTree = "<group>";
@@ -529,6 +548,35 @@
 				5D622D21128F329BE410499C /* Pods-Shopin.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		C545A627215CF14E00B06A9A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C545A628215CF15C00B06A9A /* CustomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C5F93D17215BB9FF00592E02 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C5F93D13215BB96C00592E02 /* ApiServices.swift */,
+				C5F93D14215BB96C00592E02 /* Constants.swift */,
+				C5F93D18215BBA0C00592E02 /* Services.swift */,
+				C5F93D1D215BBE2D00592E02 /* GlobalData.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		C5F93D1A215BBBB600592E02 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C5F93D1B215BBBC900592E02 /* CategoriesModel.swift */,
+				C5F93D1F215BCE2000592E02 /* StoreModel.swift */,
+				C5F93D21215BD95300592E02 /* ProductsModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -690,7 +738,9 @@
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -699,7 +749,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -732,6 +784,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				953BFDCB213AD5480056F55F /* PrivacyPolicyViewController.swift in Sources */,
+				C5F93D22215BD95300592E02 /* ProductsModel.swift in Sources */,
 				953E38BE21383262008AD424 /* LeftTableViewCell.swift in Sources */,
 				95B3BF432136A9B8007D0AB9 /* LoginViewController.swift in Sources */,
 				951FC8BA213D6D6900883C9D /* PaymentSuccessViewController.swift in Sources */,
@@ -756,8 +809,10 @@
 				953BFDC1213AD50B0056F55F /* CreditViewController.swift in Sources */,
 				95B3BF3E2136A11F007D0AB9 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				95B3BF3D2136A11F007D0AB9 /* TPKeyboardAvoidingTableView.m in Sources */,
+				C5F93D20215BCE2000592E02 /* StoreModel.swift in Sources */,
 				953BFDCF213CCD490056F55F /* OrderStatusViewController.swift in Sources */,
 				953BFDDB213CDE030056F55F /* NewsViewController.swift in Sources */,
+				C545A629215CF15C00B06A9A /* CustomeView.swift in Sources */,
 				95429CC2213A418E00B3FF12 /* WishlistViewController.swift in Sources */,
 				953E38CC21392C83008AD424 /* MainTabBarController.m in Sources */,
 				95B3BF3B2136A11F007D0AB9 /* TPKeyboardAvoidingCollectionView.m in Sources */,
@@ -765,7 +820,9 @@
 				953BFDBF213AD5020056F55F /* CouponViewController.swift in Sources */,
 				95318963213730DD00BEC102 /* SendPWCodeViewController.swift in Sources */,
 				958BDE93213A90AA005CE9D3 /* ProductListViewController.swift in Sources */,
+				C5F93D1E215BBE2D00592E02 /* GlobalData.swift in Sources */,
 				95B3BF202136928F007D0AB9 /* StartViewController.swift in Sources */,
+				C5F93D19215BBA0C00592E02 /* Services.swift in Sources */,
 				953BFDC5213AD5270056F55F /* ContactUsViewController.swift in Sources */,
 				957F471121393B26009D2518 /* CategoryCollectionViewCell.swift in Sources */,
 				951FC8B0213D3CC300883C9D /* ProductDetailsViewController.swift in Sources */,
@@ -773,9 +830,12 @@
 				953BFDBD213ACFBA0056F55F /* MyOrdersViewController.swift in Sources */,
 				953BFDDD213CDE0B0056F55F /* NotificationViewController.swift in Sources */,
 				953189672137355700BEC102 /* ChangePWViewController.swift in Sources */,
+				C5F93D15215BB96C00592E02 /* ApiServices.swift in Sources */,
 				953E38C02138804A008AD424 /* AvapterTableViewCell.swift in Sources */,
 				951C3D9821397D6E00D4E22E /* ProductCategoryViewController.swift in Sources */,
 				953BFDC3213AD51A0056F55F /* AboutUsViewController.swift in Sources */,
+				C5F93D16215BB96C00592E02 /* Constants.swift in Sources */,
+				C5F93D1C215BBBC900592E02 /* CategoriesModel.swift in Sources */,
 				951FC8B4213D69F000883C9D /* CheckoutViewController.swift in Sources */,
 				957F471F21394B6C009D2518 /* StoreViewController.swift in Sources */,
 			);
@@ -920,6 +980,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F8M3BMP7WE;
 				INFOPLIST_FILE = Shopin/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -937,6 +998,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F8M3BMP7WE;
 				INFOPLIST_FILE = Shopin/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

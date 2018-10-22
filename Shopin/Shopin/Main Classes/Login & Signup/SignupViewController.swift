@@ -12,7 +12,7 @@ import SVProgressHUD
 
 class SignupViewController: UIViewController {
 
-    let URL_USER_REGISTER = "http://api.thelifetracking.com/codeigniter/api/register"
+    let URL_USER_REGISTER = "http://18.223.244.218/backend/Backend_Shopin/index.php/api/register"
     let defaultValues = UserDefaults.standard
     
     

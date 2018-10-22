@@ -11,7 +11,7 @@ import Alamofire
 import SVProgressHUD
 
 class LoginViewController: UIViewController {
-    let URL_USER_LOGIN = "http://api.thelifetracking.com/codeigniter/api/login"
+    let URL_USER_LOGIN = "http://18.223.244.218/backend/Backend_Shopin/index.php/api/login"
     let defaultValues = UserDefaults.standard
     
     @IBOutlet weak var txt_Email: UITextField!
