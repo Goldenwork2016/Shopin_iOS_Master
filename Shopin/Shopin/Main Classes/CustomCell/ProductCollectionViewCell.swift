@@ -11,6 +11,12 @@ import UIKit
 class ProductCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var productView: UIView!
+
+    @IBOutlet weak var productNameLabel: UILabel!
+    @IBOutlet weak var productSizeLabel: UILabel!
+    @IBOutlet weak var productUnitLabel: UILabel!
+    
+    @IBOutlet weak var productImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

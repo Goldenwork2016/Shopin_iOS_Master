@@ -90,6 +90,10 @@ extension ProductCategoryViewController : UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let productListVC = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "productListVC") as? ProductListViewController
+        
+        let product = GlobalData.instance.ProductsList[indexPath.row]
+        productListVC?.productModel = product
+        
         self.navigationController?.pushViewController(productListVC!, animated: true)
     }
     

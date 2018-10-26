@@ -56,6 +56,7 @@ class ProductCategoryTableViewCell: UITableViewCell {
     }
 
     func configureCell(model : ProductsModel,brandName : String){
+        
         let catgory = model.category
         self.lbl_Category.text = catgory.value(forKey: "cat_name") as? String ?? ""
         let products = model.Products

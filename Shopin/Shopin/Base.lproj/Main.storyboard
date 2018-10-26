@@ -108,7 +108,7 @@
                                     <constraint firstAttribute="width" constant="200" id="qOn-HF-S9I"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F8X-dj-ExS">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="jeep.freelancer@gmail.com" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F8X-dj-ExS">
                                 <rect key="frame" x="20" y="320" width="335" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="FxK-UW-50q"/>
@@ -127,7 +127,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NTq-D2-pis">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Mom19620119" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NTq-D2-pis">
                                 <rect key="frame" x="20" y="368" width="335" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="VU5-jR-rcd"/>
@@ -2856,6 +2856,10 @@
                                             <constraint firstItem="Ni9-H4-3t8" firstAttribute="top" secondItem="F5D-9D-zuG" secondAttribute="bottom" id="vn4-N0-7ul"/>
                                         </constraints>
                                         <connections>
+                                            <outlet property="productImageView" destination="AfB-dn-JIa" id="mJR-kh-RoA"/>
+                                            <outlet property="productNameLabel" destination="lYz-4u-FSN" id="wCW-Sk-oFE"/>
+                                            <outlet property="productSizeLabel" destination="WbA-0l-VhZ" id="8fi-94-8Vt"/>
+                                            <outlet property="productUnitLabel" destination="F5D-9D-zuG" id="nhC-do-zcA"/>
                                             <outlet property="productView" destination="H4z-2W-nnO" id="AA4-CM-MSy"/>
                                         </connections>
                                     </collectionViewCell>
@@ -2981,6 +2985,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="URX-IQ-nOi"/>
                     <connections>
+                        <outlet property="categoryLabel" destination="fYq-xy-IPs" id="shk-Zq-Fnu"/>
                         <outlet property="collectionView" destination="zGt-YQ-bDQ" id="WVM-rt-1Th"/>
                         <segue destination="y83-vq-ZQV" kind="push" id="bwk-Ac-WHb"/>
                     </connections>
@@ -3666,6 +3671,15 @@
                     </view>
                     <navigationItem key="navigationItem" id="nHo-2U-BdJ"/>
                     <connections>
+                        <outlet property="producImageView" destination="43Q-NA-Hcd" id="2Jy-Jp-Ood"/>
+                        <outlet property="productBrandLabel" destination="MRw-R0-8Do" id="TC7-pp-IBb"/>
+                        <outlet property="productConditionsLabel" destination="KFZ-I3-psC" id="lYk-fq-IIJ"/>
+                        <outlet property="productDescriptionLabel" destination="9Na-4s-bHL" id="oBO-E5-HYW"/>
+                        <outlet property="productNameLabel" destination="32A-0I-Enc" id="5ay-W2-zq5"/>
+                        <outlet property="productPriceLabel" destination="UdG-WX-uSP" id="PLM-BC-xPI"/>
+                        <outlet property="productPricePerUnitLabel" destination="AA5-8W-2xX" id="BRL-CF-4iG"/>
+                        <outlet property="productSizeLabel" destination="c1a-Z9-ZAo" id="7OW-9b-f1T"/>
+                        <outlet property="productStoreLabel" destination="Fmo-E2-707" id="rce-cW-BGc"/>
                         <outlet property="scrollView" destination="v8L-7J-DpG" id="o4O-mE-qx3"/>
                         <segue destination="yIO-bT-UIL" kind="push" id="Ebm-ef-kgo"/>
                     </connections>
@@ -4181,13 +4195,6 @@
                                     <constraint firstItem="cXH-CN-1Dg" firstAttribute="width" secondItem="cXH-CN-1Dg" secondAttribute="height" multiplier="1:1" id="ymq-6s-VwB"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_PaymentSuccess.png" translatesAutoresizingMaskIntoConstraints="NO" id="hao-dy-BL0">
-                                <rect key="frame" x="87.5" y="120" width="200" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="OLM-zi-yzA"/>
-                                    <constraint firstAttribute="width" secondItem="hao-dy-BL0" secondAttribute="height" multiplier="1:1" id="P6e-14-SwQ"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PAYMENT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q4U-Dz-HFq">
                                 <rect key="frame" x="60" y="340" width="255" height="40"/>
                                 <constraints>
@@ -4229,6 +4236,13 @@
                                     <action selector="onContinue:" destination="CeG-sq-phw" eventType="touchUpInside" id="a0O-hj-FqU"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_PaymentSuccess.png" translatesAutoresizingMaskIntoConstraints="NO" id="hao-dy-BL0">
+                                <rect key="frame" x="87" y="120" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="OLM-zi-yzA"/>
+                                    <constraint firstAttribute="width" secondItem="hao-dy-BL0" secondAttribute="height" multiplier="1:1" id="P6e-14-SwQ"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -7472,20 +7486,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dqh-VH-Up9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1652" y="5178"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="gfy-OM-FTc">
-            <objects>
-                <viewController id="NDJ-ly-26F" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="MiE-04-C0X">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="Sea-YP-2VS"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aSX-lK-ZHR" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
         </scene>
     </scenes>
     <resources>

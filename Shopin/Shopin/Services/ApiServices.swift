@@ -134,6 +134,25 @@ class ApiServices {
         
     }
     
+    func GetSpecificProductWithCategory(param : [String:String], success:@escaping (JSON) -> Void, failure:@escaping (Error) -> Void){
+    
+        print("PARAMS \(String(describing: param["product_id"]))")
+        print("12321412412412 \(param)")
+
+        Alamofire.request(API_GET_CATEGORY_GET_SPECIFIC_PRODUCT, method: .post, parameters: param, headers: nil).responseJSON { (responseObject) -> Void in
+            print("URLLLRLSLLS \(API_GET_CATEGORY_GET_SPECIFIC_PRODUCT)")
+            print("RESPONSE OBJECT \(responseObject)")
+            if responseObject.result.isSuccess {
+                let resJson = JSON(responseObject.result.value!)
+                success(resJson)
+            }else{
+                let error : Error = responseObject.result.error!
+                failure(error)
+            }
+            
+        }
+        
+    }
     
     func GetStoreProductsWithCategory(param : [String:String],completion : @escaping COMPLETION_HANDLER){
         
@@ -145,7 +164,9 @@ class ApiServices {
             case .success(_):
                 do {
                     let data = try JSON(data: response.data!)
+                    
                     print(data)
+                    
                     let status = data["code"].int
                     if status != nil {
                         if status == 200 {

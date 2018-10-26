@@ -143,6 +143,13 @@
 		C5F93D1E215BBE2D00592E02 /* GlobalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F93D1D215BBE2D00592E02 /* GlobalData.swift */; };
 		C5F93D20215BCE2000592E02 /* StoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F93D1F215BCE2000592E02 /* StoreModel.swift */; };
 		C5F93D22215BD95300592E02 /* ProductsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F93D21215BD95300592E02 /* ProductsModel.swift */; };
+		DE6467B42182455C00B6E7F6 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6467B32182455C00B6E7F6 /* Color.swift */; };
+		DEF4F36F2181C0E400930EFD /* MyAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF4F3682181C0E200930EFD /* MyAPIClient.swift */; };
+		DEF4F3702181C0E400930EFD /* BrowseProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF4F3692181C0E300930EFD /* BrowseProductsViewController.swift */; };
+		DEF4F3722181C0E400930EFD /* PaymentContextFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF4F36B2181C0E300930EFD /* PaymentContextFooterView.swift */; };
+		DEF4F3732181C0E400930EFD /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF4F36C2181C0E400930EFD /* SettingsViewController.swift */; };
+		DEF4F3742181C0E400930EFD /* CheckoutRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF4F36D2181C0E400930EFD /* CheckoutRowView.swift */; };
+		DEF4F3752181C0E400930EFD /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF4F36E2181C0E400930EFD /* Buttons.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -292,6 +299,13 @@
 		C5F93D1D215BBE2D00592E02 /* GlobalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalData.swift; sourceTree = "<group>"; };
 		C5F93D1F215BCE2000592E02 /* StoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreModel.swift; sourceTree = "<group>"; };
 		C5F93D21215BD95300592E02 /* ProductsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsModel.swift; sourceTree = "<group>"; };
+		DE6467B32182455C00B6E7F6 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		DEF4F3682181C0E200930EFD /* MyAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAPIClient.swift; sourceTree = "<group>"; };
+		DEF4F3692181C0E300930EFD /* BrowseProductsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseProductsViewController.swift; sourceTree = "<group>"; };
+		DEF4F36B2181C0E300930EFD /* PaymentContextFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentContextFooterView.swift; sourceTree = "<group>"; };
+		DEF4F36C2181C0E400930EFD /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		DEF4F36D2181C0E400930EFD /* CheckoutRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutRowView.swift; sourceTree = "<group>"; };
+		DEF4F36E2181C0E400930EFD /* Buttons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -380,6 +394,7 @@
 		95B3BF0621368DDB007D0AB9 /* Shopin */ = {
 			isa = PBXGroup;
 			children = (
+				DEF4F3672181C0DA00930EFD /* Stripe */,
 				C545A627215CF14E00B06A9A /* Views */,
 				C5F93D1A215BBBB600592E02 /* Models */,
 				8B57B81721482A5600D9C6F7 /* FacebookService */,
@@ -572,11 +587,25 @@
 		C5F93D1A215BBBB600592E02 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DE6467B32182455C00B6E7F6 /* Color.swift */,
 				C5F93D1B215BBBC900592E02 /* CategoriesModel.swift */,
 				C5F93D1F215BCE2000592E02 /* StoreModel.swift */,
 				C5F93D21215BD95300592E02 /* ProductsModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		DEF4F3672181C0DA00930EFD /* Stripe */ = {
+			isa = PBXGroup;
+			children = (
+				DEF4F3692181C0E300930EFD /* BrowseProductsViewController.swift */,
+				DEF4F36E2181C0E400930EFD /* Buttons.swift */,
+				DEF4F36D2181C0E400930EFD /* CheckoutRowView.swift */,
+				DEF4F3682181C0E200930EFD /* MyAPIClient.swift */,
+				DEF4F36B2181C0E300930EFD /* PaymentContextFooterView.swift */,
+				DEF4F36C2181C0E400930EFD /* SettingsViewController.swift */,
+			);
+			path = Stripe;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -740,6 +769,7 @@
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Stripe/Stripe.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -751,6 +781,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stripe.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -786,6 +817,8 @@
 				953BFDCB213AD5480056F55F /* PrivacyPolicyViewController.swift in Sources */,
 				C5F93D22215BD95300592E02 /* ProductsModel.swift in Sources */,
 				953E38BE21383262008AD424 /* LeftTableViewCell.swift in Sources */,
+				DEF4F3702181C0E400930EFD /* BrowseProductsViewController.swift in Sources */,
+				DEF4F36F2181C0E400930EFD /* MyAPIClient.swift in Sources */,
 				95B3BF432136A9B8007D0AB9 /* LoginViewController.swift in Sources */,
 				951FC8BA213D6D6900883C9D /* PaymentSuccessViewController.swift in Sources */,
 				958BDE95213A9130005CE9D3 /* ProductCollectionViewCell.swift in Sources */,
@@ -800,10 +833,12 @@
 				951C3D9B21397F0700D4E22E /* ProductCategoryTableViewCell.swift in Sources */,
 				958E2AAC2136D74A0028F54B /* SignupViewController.swift in Sources */,
 				95B3BF0821368DDB007D0AB9 /* AppDelegate.swift in Sources */,
+				DE6467B42182455C00B6E7F6 /* Color.swift in Sources */,
 				953E38A22138251F008AD424 /* HomeViewController.swift in Sources */,
 				953BFDD9213CDADC0056F55F /* MomViewController.swift in Sources */,
 				953E389A21381D14008AD424 /* LeftViewController.swift in Sources */,
 				953BFDC9213AD53D0056F55F /* TermsConditionsViewController.swift in Sources */,
+				DEF4F3732181C0E400930EFD /* SettingsViewController.swift in Sources */,
 				953BFD9B213A9D040056F55F /* ProfileViewController.swift in Sources */,
 				9531896121372E3F00BEC102 /* LoginWithBiometricViewController.swift in Sources */,
 				953BFDC1213AD50B0056F55F /* CreditViewController.swift in Sources */,
@@ -821,15 +856,18 @@
 				95318963213730DD00BEC102 /* SendPWCodeViewController.swift in Sources */,
 				958BDE93213A90AA005CE9D3 /* ProductListViewController.swift in Sources */,
 				C5F93D1E215BBE2D00592E02 /* GlobalData.swift in Sources */,
+				DEF4F3752181C0E400930EFD /* Buttons.swift in Sources */,
 				95B3BF202136928F007D0AB9 /* StartViewController.swift in Sources */,
 				C5F93D19215BBA0C00592E02 /* Services.swift in Sources */,
 				953BFDC5213AD5270056F55F /* ContactUsViewController.swift in Sources */,
 				957F471121393B26009D2518 /* CategoryCollectionViewCell.swift in Sources */,
+				DEF4F3742181C0E400930EFD /* CheckoutRowView.swift in Sources */,
 				951FC8B0213D3CC300883C9D /* ProductDetailsViewController.swift in Sources */,
 				953189652137347A00BEC102 /* ConfirmCodeViewController.swift in Sources */,
 				953BFDBD213ACFBA0056F55F /* MyOrdersViewController.swift in Sources */,
 				953BFDDD213CDE0B0056F55F /* NotificationViewController.swift in Sources */,
 				953189672137355700BEC102 /* ChangePWViewController.swift in Sources */,
+				DEF4F3722181C0E400930EFD /* PaymentContextFooterView.swift in Sources */,
 				C5F93D15215BB96C00592E02 /* ApiServices.swift in Sources */,
 				953E38C02138804A008AD424 /* AvapterTableViewCell.swift in Sources */,
 				951C3D9821397D6E00D4E22E /* ProductCategoryViewController.swift in Sources */,

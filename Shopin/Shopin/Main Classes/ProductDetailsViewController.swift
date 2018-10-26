@@ -10,11 +10,38 @@ import UIKit
 
 class ProductDetailsViewController: MomViewController {
 
+    var passedProductID = ""
+    
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var producImageView: UIImageView!
+    
+    @IBOutlet weak var productNameLabel: UILabel!
+    @IBOutlet weak var productStoreLabel: UILabel!
+    
+    @IBOutlet weak var productPricePerUnitLabel: UILabel!
+    @IBOutlet weak var productPriceLabel: UILabel!
+    
+    @IBOutlet weak var productSizeLabel: UILabel!
+    
+    @IBOutlet weak var productDescriptionLabel: UILabel!
+    @IBOutlet weak var productConditionsLabel: UILabel!
+    
+    @IBOutlet weak var productBrandLabel: UILabel!
+    
+    var price = 0
+    var imageURL = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        super.viewWillAppear(true)
+        
+        self.fetchDetails()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -62,7 +89,50 @@ class ProductDetailsViewController: MomViewController {
     }    
     
     @IBAction func onBuyNow(_ sender: Any) {
-        let checkoutVC = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "checkoutVC") as? CheckoutViewController
-        self.navigationController?.pushViewController(checkoutVC!, animated: true)
+        
+//        let checkoutVC = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "checkoutVC") as? CheckoutViewController
+//        self.navigationController?.pushViewController(checkoutVC!, animated: true)
+        
+        let settingsVC = SettingsViewController()
+        
+        print(settingsVC.settings)
+        
+        let checkoutViewController = CheckoutViewController(product: self.productNameLabel.text!,
+                                                            price: price * 100,
+                                                            settings: settingsVC.settings)
+        checkoutViewController.productURL = self.imageURL
+            
+        self.navigationController?.pushViewController(checkoutViewController, animated: true)
+
+
     }
+    
+    func fetchDetails(){
+        
+        let param = ["product_id": "\(passedProductID)"]
+
+        ApiServices.instance.GetSpecificProductWithCategory(param: param, success: { (response) in
+            print("RESPONSEASDASDASDASDAS \(response)")
+            let data = response["data"]
+            
+            let imageName =  data["pro_image"].string!
+            self.imageURL = "\(API_PRODUCTS_IMAGE)\(imageName)"
+            let url = URL(string: self.imageURL)
+            self.producImageView.kf.setImage(with: url)
+            
+            self.productSizeLabel.text = data["size"].string!
+            self.productPriceLabel.text = "$\(data["price"].string!)"
+            self.productDescriptionLabel.text = data["description"].string!
+            self.productConditionsLabel.text = data["product_condition"].string!
+            self.productNameLabel.text = data["pro_name"].string!
+            
+            self.price = data["price"].intValue
+
+            
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+        
+    }
+    
 }
