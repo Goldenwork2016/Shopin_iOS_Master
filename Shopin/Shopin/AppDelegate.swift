@@ -9,6 +9,7 @@
 import UIKit
 import IQKeyboardManagerSwift
 import Stripe
+import OnePaySDK
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -36,7 +37,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().tintColor = UIColor.white
         UINavigationBar.appearance().isTranslucent = false
         UINavigationBar.appearance().barTintColor = Color.navColor
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.font : (UIFont(name: "Helvetica", size: 18))!, NSAttributedStringKey.foregroundColor: UIColor.white] 
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.font : (UIFont(name: "Helvetica", size: 18))!, NSAttributedStringKey.foregroundColor: UIColor.white]
+        
+        self.checkOut()
 
         return true
     }
@@ -61,6 +64,58 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    func application(_ app: UIApplication, open url: URL,
+                     options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        
+        let sendingAppID = options[.sourceApplication]
+        print("source application = \(sendingAppID ?? "Unknown")")
+        guard
+            let components = NSURLComponents(url: url, resolvingAgainstBaseURL: true),
+            let host = components.host,
+            let path = components.path,
+            let params = components.queryItems
+            else {
+                print("URL, host, path o params inválidos: %s", url.absoluteString)
+                return false
+        }
+        if (host == "mi-app" && path == "onepay-result") {
+            guard
+                let occ = params.first(where: { $0.name == "occ" })?.value,
+                let externalUniqueNumber = params.first(where: { $0.name == "externalUniqueNumber" })?.value
+                else {
+                    print("Falta un parámetro occ o externalUniqueNumber: %s", url.absoluteString)
+                    return false
+            }
+            // Envia el occ y el externalUniqueNumber a tu backend para que
+            // confirme la transacción
+            print(occ, externalUniqueNumber)
+            
+        } else {
+            // Otras URLs que quizás maneja tu app
+        }
+        return false
+        
+    }
+    
+    func checkOut() {
+        let onepay = OnePay();
+        onepay.initPayment("aqui-va-la-occ",
+                           callback: {(statusCode, description) in
+                            switch statusCode {
+                            case OnePayState.occInvalid:
+                                // Algo anda mal con el occ que obtuviste desde el backend
+                                // Debes reintentar obtener el occ o abortar
+                                
+                                print("Onepay invalid")
+                            case OnePayState.notInstalled:
+                                // Onepay no está instalado.
+                                // Debes abortar o pedir al usuario instalar Onepay (y luego reintentar initPayment)
+                                print("Onepay no instalado")
+                            }
+        }
+        )
     }
 
 }
