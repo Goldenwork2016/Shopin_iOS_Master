@@ -10,6 +10,7 @@ import UIKit
 import IQKeyboardManagerSwift
 import Stripe
 import OnePaySDK
+import Alamofire
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -38,8 +39,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().isTranslucent = false
         UINavigationBar.appearance().barTintColor = Color.navColor
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.font : (UIFont(name: "Helvetica", size: 18))!, NSAttributedStringKey.foregroundColor: UIColor.white]
-        
-        self.checkOut()
 
         return true
     }
@@ -83,7 +82,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if (host == "mi-app" && path == "onepay-result") {
             guard
                 let occ = params.first(where: { $0.name == "occ" })?.value,
-                let externalUniqueNumber = params.first(where: { $0.name == "externalUniqueNumber" })?.value
+                let externalUniqueNumber = params.first(where: { $0.name == "externalUniqueNumber" })?.value,
+                let status = params.first(where: { $0.name == "status" })?.value
                 else {
                     print("Falta un parámetro occ o externalUniqueNumber: %s", url.absoluteString)
                     return false
@@ -91,6 +91,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             // Envia el occ y el externalUniqueNumber a tu backend para que
             // confirme la transacción
             print(occ, externalUniqueNumber)
+            self.confirmTransaction(occ: occ, externalUniqueNumber: externalUniqueNumber, status: status)
             
         } else {
             // Otras URLs que quizás maneja tu app
@@ -99,23 +100,43 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
     }
     
-    func checkOut() {
-        let onepay = OnePay();
-        onepay.initPayment("aqui-va-la-occ",
-                           callback: {(statusCode, description) in
-                            switch statusCode {
-                            case OnePayState.occInvalid:
-                                // Algo anda mal con el occ que obtuviste desde el backend
-                                // Debes reintentar obtener el occ o abortar
-                                
-                                print("Onepay invalid")
-                            case OnePayState.notInstalled:
-                                // Onepay no está instalado.
-                                // Debes abortar o pedir al usuario instalar Onepay (y luego reintentar initPayment)
-                                print("Onepay no instalado")
-                            }
+    func confirmTransaction(occ: String, externalUniqueNumber: String, status: String) {
+        let parameters: Parameters=[
+            "occ":occ,
+            "externalUniqueNumber":externalUniqueNumber,
+            "status":status
+        ]
+        
+        print("parameters = ", parameters)
+        
+        Alamofire.request(API_ONEPAY_CONFIRM, method: .post, parameters: parameters,encoding: URLEncoding.default, headers: nil).responseJSON {
+            response in
+            switch response.result {
+            case .success:
+                print(response)
+                if let result = response.result.value {
+                    let responseData = result as! NSDictionary
+                    //if there is no error
+                    
+                    if(responseData.value(forKey: "code") as! Int == 200){
+                        
+                        //getting the user from response
+                        let data = responseData.value(forKey: "data") as! NSDictionary
+                        
+                        print(data)
+                        
+                    }else if(responseData.value(forKey: "statu") as! Int == 201){
+                        let errorMessage = responseData.value(forKey: "message") as! String
+                        print(errorMessage)
+                        
+                    }
+                }
+                break
+            case .failure(let error):
+                
+                print(error)
+            }
         }
-        )
     }
 
 }

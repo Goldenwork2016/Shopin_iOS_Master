@@ -151,7 +151,6 @@
 		DEF4F3742181C0E400930EFD /* CheckoutRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF4F36D2181C0E400930EFD /* CheckoutRowView.swift */; };
 		DEF4F3752181C0E400930EFD /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF4F36E2181C0E400930EFD /* Buttons.swift */; };
 		E208C56D2196A930001D893A /* OnePaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E208C56C2196A930001D893A /* OnePaySDK.framework */; };
-		E208C5712196AA26001D893A /* OnePayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E208C5702196AA26001D893A /* OnePayViewController.swift */; };
 		E2A300AC219C644300D45A1F /* OnePaySDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E208C56C2196A930001D893A /* OnePaySDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
@@ -324,7 +323,6 @@
 		DEF4F36D2181C0E400930EFD /* CheckoutRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutRowView.swift; sourceTree = "<group>"; };
 		DEF4F36E2181C0E400930EFD /* Buttons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		E208C56C2196A930001D893A /* OnePaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OnePaySDK.framework; sourceTree = "<group>"; };
-		E208C5702196AA26001D893A /* OnePayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnePayViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -548,7 +546,6 @@
 				953BFDDC213CDE0B0056F55F /* NotificationViewController.swift */,
 				951FC8A9213CE05A00883C9D /* SelectCountryViewController.swift */,
 				951FC8AB213CE06500883C9D /* SelectLanguageViewController.swift */,
-				E208C5702196AA26001D893A /* OnePayViewController.swift */,
 			);
 			path = "Main Classes";
 			sourceTree = "<group>";
@@ -883,7 +880,6 @@
 				95B3BF202136928F007D0AB9 /* StartViewController.swift in Sources */,
 				C5F93D19215BBA0C00592E02 /* Services.swift in Sources */,
 				953BFDC5213AD5270056F55F /* ContactUsViewController.swift in Sources */,
-				E208C5712196AA26001D893A /* OnePayViewController.swift in Sources */,
 				957F471121393B26009D2518 /* CategoryCollectionViewCell.swift in Sources */,
 				DEF4F3742181C0E400930EFD /* CheckoutRowView.swift in Sources */,
 				951FC8B0213D3CC300883C9D /* ProductDetailsViewController.swift in Sources */,

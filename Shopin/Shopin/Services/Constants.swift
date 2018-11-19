@@ -27,6 +27,10 @@ let API_GET_CATEGORY_WISE_PRODUCTS = "\(BASE_API)index.php/api/get_category_wise
 
 let API_GET_CATEGORY_GET_SPECIFIC_PRODUCT = "\(BASE_API)index.php/api/product_detail"
 
+let API_ONEPAY_CHECKOUT = "\(BASE_API)index.php/api/checkout_onepay"
+
+let API_ONEPAY_CONFIRM = "\(BASE_API)index.php/api/commit_transaction_onepay"
+
 
 
 

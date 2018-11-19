@@ -8,6 +8,9 @@
 
 import UIKit
 import Stripe
+import Alamofire
+import SVProgressHUD
+import OnePaySDK
 
 class CheckoutViewController: UIViewController {
 
@@ -43,6 +46,7 @@ class CheckoutViewController: UIViewController {
     let shippingString: String
     var product = ""
     var productURL = ""
+    var price = 0
     
     var paymentInProgress: Bool = false {
         didSet {
@@ -71,6 +75,7 @@ class CheckoutViewController: UIViewController {
         
         self.product = product
         self.productImage.text = product
+        self.price = price
         self.theme = settings.theme
         MyAPIClient.sharedClient.baseURLString = self.backendBaseURL
         
@@ -211,8 +216,73 @@ class CheckoutViewController: UIViewController {
     }
     
     @objc func didTapBuy() {
-        self.paymentInProgress = true
-        self.paymentContext.requestPayment()
+//        self.paymentInProgress = true
+//        self.paymentContext.requestPayment()
+        
+        let parameters: Parameters=[
+            "product_id":self.product,
+            "product_name":self.product,
+            "quantity":1,
+            "price":self.price
+        ]
+        
+//        let param = ["product_id": "\(1)", "product_name": "\(1)", "quantity": "\(1)", "price": "\(1)"]
+        
+        print("parameters = ", parameters)
+        
+        SVProgressHUD.show(withStatus: "Loading")
+        Alamofire.request(API_ONEPAY_CHECKOUT, method: .post, parameters: parameters,encoding: URLEncoding.default, headers: nil).responseJSON {
+            response in
+            SVProgressHUD.dismiss()
+            switch response.result {
+            case .success:
+                print(response)
+                if let result = response.result.value {
+                    let responseData = result as! NSDictionary
+                    //if there is no error
+                    
+                    if(responseData.value(forKey: "code") as! Int == 200){
+                        
+                        //getting the user from response
+                        let data = responseData.value(forKey: "data") as! NSDictionary
+                        
+                        let occ = responseData.value(forKey: "occ") as! String
+                        
+                        self.checkOut(occ: occ)
+                        print(data)
+                        
+                    }else if(responseData.value(forKey: "code") as! Int == 201){
+                        let errorMessage = responseData.value(forKey: "message") as! String
+                        print(errorMessage)
+                        
+                    }
+                }
+                break
+            case .failure(let error):
+                
+                print(error)
+            }
+        }
+        
+    }
+    
+    func checkOut(occ: String) {
+        let onepay = OnePay()
+        onepay.initPayment(occ,
+                           callback: {(statusCode, description) in
+                            switch statusCode {
+                            case OnePayState.occInvalid:
+                                // Algo anda mal con el occ que obtuviste desde el backend
+                                // Debes reintentar obtener el occ o abortar
+                                
+                                print("Onepay invalid")
+                            case OnePayState.notInstalled:
+                                // Onepay no está instalado.
+                                // Debes abortar o pedir al usuario instalar Onepay (y luego reintentar initPayment)
+                                print("Onepay no instalado")
+                            }
+        }
+        )
     }
     
     // MARK: STPPaymentContextDelegate
