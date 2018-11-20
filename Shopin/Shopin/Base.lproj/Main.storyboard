@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SKz-vo-Csb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SKz-vo-Csb">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -1347,7 +1347,11 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="imv_productImage" destination="bW3-tJ-83j" id="gl1-h9-Mou"/>
                                             <outlet property="lbl_ItemNO" destination="zgj-JM-HPU" id="FMA-V0-8Is"/>
+                                            <outlet property="lbl_price" destination="HAs-YB-uU3" id="6cS-HX-4fJ"/>
+                                            <outlet property="lbl_productName" destination="pIG-Hz-7j1" id="M70-Ty-4m3"/>
+                                            <outlet property="lbl_quanlity" destination="8qU-wv-Mzq" id="Tcr-vK-ipI"/>
                                             <outlet property="productView" destination="IhH-iV-GMw" id="D3P-rb-J4r"/>
                                         </connections>
                                     </tableViewCell>
@@ -3558,6 +3562,9 @@
                                                 <state key="normal" title="ADD TO CART" backgroundImage="bdg_Button.png">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="onAddToCard:" destination="y83-vq-ZQV" eventType="touchUpInside" id="Cpn-Vh-pIn"/>
+                                                </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GGB-aP-cvH">
                                                 <rect key="frame" x="110" y="10" width="20" height="30"/>
@@ -4237,7 +4244,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_PaymentSuccess.png" translatesAutoresizingMaskIntoConstraints="NO" id="hao-dy-BL0">
-                                <rect key="frame" x="87" y="120" width="200" height="200"/>
+                                <rect key="frame" x="87.5" y="120" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="OLM-zi-yzA"/>
                                     <constraint firstAttribute="width" secondItem="hao-dy-BL0" secondAttribute="height" multiplier="1:1" id="P6e-14-SwQ"/>

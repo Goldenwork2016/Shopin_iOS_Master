@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Realm
+import RealmSwift
 
 class ProductDetailsViewController: MomViewController {
 
@@ -133,6 +135,20 @@ class ProductDetailsViewController: MomViewController {
             print(error.localizedDescription)
         }
         
+    }
+    
+    @IBAction func onAddToCard(_ sender: Any) {
+        let realm = try! Realm()
+        let obj = ProductItem.init()
+        obj.product_id = self.passedProductID
+        obj.product_name = self.productNameLabel.text!
+        obj.quantity = 1
+        obj.price = self.price
+        obj.image_url = self.imageURL
+        try! realm.write {
+            realm.add(obj, update: true)
+            self.showMessage(message: "Add to Card success", title: "Information")
+        }
     }
     
 }

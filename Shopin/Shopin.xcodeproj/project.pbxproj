@@ -151,6 +151,8 @@
 		DEF4F3742181C0E400930EFD /* CheckoutRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF4F36D2181C0E400930EFD /* CheckoutRowView.swift */; };
 		DEF4F3752181C0E400930EFD /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF4F36E2181C0E400930EFD /* Buttons.swift */; };
 		E208C56D2196A930001D893A /* OnePaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E208C56C2196A930001D893A /* OnePaySDK.framework */; };
+		E23E08C521A462DB00F1BC07 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23E08C421A462DB00F1BC07 /* Extension.swift */; };
+		E23E08C821A4680800F1BC07 /* ProductItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23E08C721A4680800F1BC07 /* ProductItem.swift */; };
 		E2A300AC219C644300D45A1F /* OnePaySDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E208C56C2196A930001D893A /* OnePaySDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
@@ -323,6 +325,8 @@
 		DEF4F36D2181C0E400930EFD /* CheckoutRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutRowView.swift; sourceTree = "<group>"; };
 		DEF4F36E2181C0E400930EFD /* Buttons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		E208C56C2196A930001D893A /* OnePaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OnePaySDK.framework; sourceTree = "<group>"; };
+		E23E08C421A462DB00F1BC07 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		E23E08C721A4680800F1BC07 /* ProductItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -413,6 +417,7 @@
 		95B3BF0621368DDB007D0AB9 /* Shopin */ = {
 			isa = PBXGroup;
 			children = (
+				E23E08C321A462C900F1BC07 /* Common */,
 				DEF4F3672181C0DA00930EFD /* Stripe */,
 				C545A627215CF14E00B06A9A /* Views */,
 				C5F93D1A215BBBB600592E02 /* Models */,
@@ -606,6 +611,7 @@
 		C5F93D1A215BBBB600592E02 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E23E08C621A4660A00F1BC07 /* RealmModel */,
 				DE6467B32182455C00B6E7F6 /* Color.swift */,
 				C5F93D1B215BBBC900592E02 /* CategoriesModel.swift */,
 				C5F93D1F215BCE2000592E02 /* StoreModel.swift */,
@@ -625,6 +631,22 @@
 				DEF4F36C2181C0E400930EFD /* SettingsViewController.swift */,
 			);
 			path = Stripe;
+			sourceTree = "<group>";
+		};
+		E23E08C321A462C900F1BC07 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				E23E08C421A462DB00F1BC07 /* Extension.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		E23E08C621A4660A00F1BC07 /* RealmModel */ = {
+			isa = PBXGroup;
+			children = (
+				E23E08C721A4680800F1BC07 /* ProductItem.swift */,
+			);
+			path = RealmModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -784,10 +806,15 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Shopin/Pods-Shopin-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts-Swift/BoltsSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper+Realm/ObjectMapper_Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Stripe/Stripe.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
@@ -796,10 +823,15 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BoltsSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper_Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stripe.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
@@ -843,6 +875,7 @@
 				951FC8BA213D6D6900883C9D /* PaymentSuccessViewController.swift in Sources */,
 				958BDE95213A9130005CE9D3 /* ProductCollectionViewCell.swift in Sources */,
 				8B57B81921482A5600D9C6F7 /* FacebookService.swift in Sources */,
+				E23E08C521A462DB00F1BC07 /* Extension.swift in Sources */,
 				953BFDC7213AD52F0056F55F /* ChatViewController.swift in Sources */,
 				951FC8AC213CE06500883C9D /* SelectLanguageViewController.swift in Sources */,
 				95429CC6213A469800B3FF12 /* MycartViewController.swift in Sources */,
@@ -861,6 +894,7 @@
 				DEF4F3732181C0E400930EFD /* SettingsViewController.swift in Sources */,
 				953BFD9B213A9D040056F55F /* ProfileViewController.swift in Sources */,
 				9531896121372E3F00BEC102 /* LoginWithBiometricViewController.swift in Sources */,
+				E23E08C821A4680800F1BC07 /* ProductItem.swift in Sources */,
 				953BFDC1213AD50B0056F55F /* CreditViewController.swift in Sources */,
 				95B3BF3E2136A11F007D0AB9 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				95B3BF3D2136A11F007D0AB9 /* TPKeyboardAvoidingTableView.m in Sources */,

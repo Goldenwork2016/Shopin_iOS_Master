@@ -7,14 +7,18 @@
 //
 
 import UIKit
+import RealmSwift
 
 class MycartViewController: MomViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    
+    var array_item: [ProductItem] = []
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -22,6 +26,13 @@ class MycartViewController: MomViewController {
         
         // Hide the navigation bar on the this view controller
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        array_item.removeAll(keepingCapacity: false)
+        let realm = try! Realm()
+        let results = realm.objects(ProductItem.self).sorted(byKeyPath: "product_name", ascending: true).toArray(ofType: ProductItem.self)
+        for item in results {
+            array_item.append(item)
+        }
+        tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -83,12 +94,14 @@ extension MycartViewController : UITableViewDelegate {
 
 extension MycartViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return array_item.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier:"wishListCell") as! WishListTableViewCell
+        let product_item = array_item[indexPath.row]
         cell.lbl_ItemNO.text = (String)(indexPath.row + 1)
+        cell.updateProductData(item: product_item)
         return cell
     }
 }
