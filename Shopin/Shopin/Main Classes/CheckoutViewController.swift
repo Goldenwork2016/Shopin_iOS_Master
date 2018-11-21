@@ -246,7 +246,7 @@ class CheckoutViewController: UIViewController {
                         //getting the user from response
                         let data = responseData.value(forKey: "data") as! NSDictionary
                         
-                        let occ = responseData.value(forKey: "occ") as! String
+                        let occ = data.value(forKey: "occ") as! String
                         
                         self.checkOut(occ: occ)
                         print(data)
